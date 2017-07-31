@@ -14,8 +14,6 @@ $(document).ready(function() {
       );
     }
   });
-  
-  // getWeatherData();
 });
 
 function getLocation_weather() {
@@ -23,7 +21,6 @@ function getLocation_weather() {
     navigator.geolocation.getCurrentPosition(function(position) {
       lat = position.coords.latitude;
       lng = position.coords.longitude;
-      // console.log(lat + " " + lng);
       $.ajax({
         url:
           "https://fcc-weather-api.glitch.me/api/current?lon=" +
@@ -63,7 +60,6 @@ function getLocation_weather() {
       });
     });
   } else {
-    console.log("Hi");
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
 }
